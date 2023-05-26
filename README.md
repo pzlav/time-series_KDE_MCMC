@@ -44,7 +44,14 @@ Plotting anomaly points:
 
 ---
 ### Conclusion
-Time-series anomaly detection plays a critical role in many industries, from finance to healthcare, security, and beyond. While traditional methods like Z-score have their merits, they fall short when dealing with non-normally distributed data. By leveraging the power of KDE and MCMC Metropolis-Husting, we can create a robust anomaly detection system capable of handling arbitrary distributions, extending the frontier of our analytic capabilities.
+Time-series anomaly detection plays a crucial role in many industries, from finance to healthcare, security, and beyond. While traditional methods like Z-score have their merits, they fall short when dealing with non-normally distributed data. By leveraging the power of KDE and MCMC Metropolis-Husting, we can create a robust anomaly detection system capable of handling arbitrary distributions, extending the frontier of our analytic capabilities.
 
+However, there are several enhancements that can be made to further improve this approach:
 
+ * Add functionality of multivariate KDE and Metropolis-Hastings: The current approach is focused on univariate data. It would be beneficial to extend the methodology to multivariate data, which is a common occurrence in real-world datasets.
 
+ * Develop a smarter way of density function estimation for a large number of points: With increasing data size, the computational cost of the current approach can be substantial. Developing a more efficient approach to estimate the density function could make this method more scalable and applicable to large datasets.
+
+ * Automate the process of bandwidth selection: Currently, the bandwidth selection is a manual process and plays a vital role in the quality of the KDE. Developing an automatic or adaptive method for bandwidth selection can help make the method more robust and easier to use.
+
+ * Check for anomalies not just in the tails but also in the middle of the distribution: The current approach might miss anomalies that are not extreme enough to fall into the tails of the distribution. Therefore, a method that can also detect anomalies within the body of the distribution will be more comprehensive.
